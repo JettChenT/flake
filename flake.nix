@@ -16,6 +16,7 @@
         [ pkgs.vim
         pkgs.uv
         pkgs.git
+        pkgs.gh
         ];
 
       # Necessary for using flakes on this system.
