@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "Jett's NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -24,7 +24,14 @@
       nix.enable = false;
 
       # Enable alternative shell support in nix-darwin.
-      # programs.fish.enable = true;
+      programs.fish.enable = true;
+
+      # Set fish as the default shell
+      users.knownUsers = [ "jettchen" ];
+      users.users.jettchen = {
+        uid = 501;
+        shell = pkgs.fish;
+      };
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
