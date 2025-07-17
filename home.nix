@@ -12,7 +12,8 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      set fish_greeting # Disable greeting
+      set fish_greeting
+      fish_vi_key_bindings
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
