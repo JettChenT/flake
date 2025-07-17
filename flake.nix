@@ -19,6 +19,9 @@
       environment.systemPackages = with pkgs; [
         vim
         uv
+        bun
+        mprocs
+        croc
         git
         gh
         btop
