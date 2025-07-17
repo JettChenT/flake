@@ -16,15 +16,19 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [ pkgs.vim
-        pkgs.uv
-        pkgs.git
-        pkgs.gh
-        pkgs.btop
-        pkgs.starship
-        pkgs.just
-        ];
+      environment.systemPackages = with pkgs; [
+        vim
+        uv
+        git
+        gh
+        btop
+        starship
+        just
+        fishPlugins.grc
+        grc
+        fzf
+        zoxide
+      ];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -58,6 +62,7 @@
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.jettchen = import ./home.nix;
+      home-manager.backupFileExtension = "backup";
     };
   in
   {
