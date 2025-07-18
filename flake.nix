@@ -20,8 +20,11 @@
         vim
         uv
         bun
+        nodejs_24
         mprocs
         croc
+        cloudflared
+        dotenvy
         git
         gh
         btop
