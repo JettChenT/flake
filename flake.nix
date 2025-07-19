@@ -26,6 +26,7 @@
         cloudflared
         dotenvy
         git
+        mitmproxy
         gh
         btop
         starship
