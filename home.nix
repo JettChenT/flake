@@ -6,6 +6,15 @@
     enable = true;
     userName = "JettChenT";
     userEmail = "jettchen12345@gmail.com";
+    aliases = {
+      co = "checkout";
+      cm = "commit";
+      st = "status";
+      br = "branch";
+      df = "diff";
+      lg = "log";
+      pl = "pull";
+    };
   };
 
   # FISH
@@ -14,6 +23,7 @@
     interactiveShellInit = ''
       set fish_greeting
       fish_vi_key_bindings
+      fish_add_path ~/.opencode/bin
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
@@ -21,6 +31,10 @@
     ];
     shellAliases = {
       j = "just";
+    };
+    shellAbbrs = {
+      gp = "git push";
+      gpl = "git pull";
     };
   };
 
