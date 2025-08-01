@@ -49,6 +49,14 @@
             git-lfs
             nil
             nixd
+            tokei
+            go
+            rustup
+            yazi
+            (llm.withPlugins {
+              llm-openrouter = true;
+              llm-git = true;
+            })
           ];
 
           # Necessary for using flakes on this system.
