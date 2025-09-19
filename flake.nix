@@ -49,13 +49,13 @@
             git-lfs
             nil
             nixd
+            nixfmt
             tokei
             go
             rustup
             yazi
             git-filter-repo
             deluge
-            pdm
             (llm.withPlugins {
               llm-openrouter = true;
               llm-git = true;

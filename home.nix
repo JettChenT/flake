@@ -26,14 +26,16 @@
       fish_add_path ~/.opencode/bin
       fish_add_path "~/.bun/bin"
       fish_add_path ~/.cargo/bin
+      fish_add_path ~/.local/bin
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      {
+        name = "grc";
+        src = pkgs.fishPlugins.grc.src;
+      }
     ];
-    shellAliases = {
-      j = "just";
-    };
+    shellAliases = { j = "just"; };
     shellAbbrs = {
       gp = "git push";
       gpl = "git pull";
@@ -43,9 +45,7 @@
   programs.starship = {
     enable = true;
     # Configuration written to ~/.config/starship.toml
-    settings = {
-      shell.disabled = false;
-    };
+    settings = { shell.disabled = false; };
   };
 
   programs.zoxide = {
@@ -55,9 +55,7 @@
 
   programs.atuin = {
     enable = true;
-    flags = [
-      "--disable-up-arrow"
-    ];
+    flags = [ "--disable-up-arrow" ];
     settings = {
       auto_sync = true;
       sync_frequency = "5m";
@@ -66,7 +64,8 @@
     };
   };
 
-  home.packages = with pkgs; [
-    # Add any additional packages you want installed via home-manager
-  ];
+  home.packages = with pkgs;
+    [
+      # Add any additional packages you want installed via home-manager
+    ];
 }
