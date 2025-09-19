@@ -25,6 +25,7 @@
       fish_vi_key_bindings
       fish_add_path ~/.opencode/bin
       fish_add_path "~/.bun/bin"
+      fish_add_path ~/.cargo/bin
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
