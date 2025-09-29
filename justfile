@@ -1,2 +1,2 @@
 refresh:
-    sudo darwin-rebuild switch --flake .#simple
+    sudo darwin-rebuild switch --flake  .#simple
