@@ -53,6 +53,8 @@
           nmap
           vault
           fd
+          R
+          rstudio
           (llm.withPlugins {
             llm-openrouter = true;
             llm-git = true;
