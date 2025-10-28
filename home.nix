@@ -27,6 +27,20 @@
       fish_add_path "~/.bun/bin"
       fish_add_path ~/.cargo/bin
       fish_add_path ~/.local/bin
+
+      # creds: https://github.com/ryanccn/flake
+      function expose_app_to_path
+          set -f app $argv[1]
+
+          if test -d "$HOME/Applications/$app.app"
+              fish_add_path -P "$HOME/Applications/$app.app/Contents/MacOS"
+          end
+          if test -d "/Applications/$app.app"
+              fish_add_path -P "/Applications/$app.app/Contents/MacOS"
+          end
+      end
+
+      expose_app_to_path Ghostty
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
