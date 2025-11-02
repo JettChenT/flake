@@ -4,16 +4,18 @@
   # GIT
   programs.git = {
     enable = true;
-    userName = "JettChenT";
-    userEmail = "jettchen12345@gmail.com";
-    aliases = {
-      co = "checkout";
-      cm = "commit";
-      st = "status";
-      br = "branch";
-      df = "diff";
-      lg = "log";
-      pl = "pull";
+    settings = {
+      user.name = "JettChenT";
+      user.email = "jettchen12345@gmail.com";
+      alias = {
+        co = "checkout";
+        cm = "commit";
+        st = "status";
+        br = "branch";
+        df = "diff";
+        lg = "log";
+        pl = "pull";
+      };
     };
   };
 
