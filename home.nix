@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.stateVersion = "25.05";
 
   # GIT
@@ -26,7 +27,7 @@
       set fish_greeting
       fish_vi_key_bindings
       fish_add_path ~/.opencode/bin
-      fish_add_path "~/.bun/bin"
+      fish_add_path ~/.bun/bin
       fish_add_path ~/.cargo/bin
       fish_add_path ~/.local/bin
 
@@ -51,7 +52,9 @@
         src = pkgs.fishPlugins.grc.src;
       }
     ];
-    shellAliases = { j = "just"; };
+    shellAliases = {
+      j = "just";
+    };
     shellAbbrs = {
       gp = "git push";
       gpl = "git pull";
@@ -61,7 +64,10 @@
   programs.starship = {
     enable = true;
     # Configuration written to ~/.config/starship.toml
-    settings = { shell.disabled = false; };
+    settings = {
+      shell.disabled = false;
+      aws.disabled = true;
+    };
   };
 
   programs.zoxide = {
@@ -80,8 +86,7 @@
     };
   };
 
-  home.packages = with pkgs;
-    [
-      # Add any additional packages you want installed via home-manager
-    ];
+  home.packages = with pkgs; [
+    # Add any additional packages you want installed via home-manager
+  ];
 }
