@@ -72,6 +72,10 @@
             pandoc
             subversion
             viu
+            zig
+            glow
+            ffmpeg
+            python314
             (llm.withPlugins {
               llm-openrouter = true;
               llm-git = true;
