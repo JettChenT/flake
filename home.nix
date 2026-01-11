@@ -32,6 +32,8 @@
       fish_add_path ~/.local/bin
       fish_add_path ~/go/bin
       fish_add_path ~/.go/bin
+      set --export AMI_INSTALL "$HOME/.ami"
+      set --export PATH $AMI_INSTALL/bin $PATH
 
       # creds: https://github.com/ryanccn/flake
       function expose_app_to_path

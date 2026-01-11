@@ -76,6 +76,8 @@
             glow
             ffmpeg
             python314
+            magic-wormhole
+            asymptote
             (llm.withPlugins {
               llm-openrouter = true;
               llm-git = true;
