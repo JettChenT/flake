@@ -90,6 +90,22 @@
     };
   };
 
+  # NEOVIM
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    extraConfig = ''
+      " Enable syntax highlighting
+      syntax on
+
+      " Line numbers
+      set number
+      set relativenumber
+    '';
+  };
+
   home.packages = with pkgs; [
     # Add any additional packages you want installed via home-manager
   ];
