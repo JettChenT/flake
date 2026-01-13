@@ -78,6 +78,7 @@
             python314
             magic-wormhole
             asymptote
+	    smlnj
             (llm.withPlugins {
               llm-openrouter = true;
               llm-git = true;
