@@ -79,6 +79,17 @@
             magic-wormhole
             asymptote
 	    smlnj
+	    tmux
+	    ast-grep
+	    rlwrap
+	    gmp
+	    gcc
+	    protobuf_33
+	    pnpm
+	    rclone
+	    terraform
+	    envsubst
+	    lefthook
             (llm.withPlugins {
               llm-openrouter = true;
               llm-git = true;
